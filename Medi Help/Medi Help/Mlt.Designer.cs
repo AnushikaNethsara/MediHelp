@@ -69,7 +69,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox1.Controls.Add(this.test);
             this.groupBox1.Controls.Add(this.other);
             this.groupBox1.Controls.Add(this.female);
@@ -104,7 +104,7 @@
             this.other.AutoSize = true;
             this.other.Location = new System.Drawing.Point(325, 136);
             this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(65, 21);
+            this.other.Size = new System.Drawing.Size(62, 21);
             this.other.TabIndex = 55;
             this.other.TabStop = true;
             this.other.Text = "Other";
@@ -115,7 +115,7 @@
             this.female.AutoSize = true;
             this.female.Location = new System.Drawing.Point(225, 138);
             this.female.Name = "female";
-            this.female.Size = new System.Drawing.Size(75, 21);
+            this.female.Size = new System.Drawing.Size(72, 21);
             this.female.TabIndex = 54;
             this.female.TabStop = true;
             this.female.Text = "Female";
@@ -126,7 +126,7 @@
             this.male.AutoSize = true;
             this.male.Location = new System.Drawing.Point(148, 138);
             this.male.Name = "male";
-            this.male.Size = new System.Drawing.Size(59, 21);
+            this.male.Size = new System.Drawing.Size(56, 21);
             this.male.TabIndex = 53;
             this.male.TabStop = true;
             this.male.Text = "Male";
