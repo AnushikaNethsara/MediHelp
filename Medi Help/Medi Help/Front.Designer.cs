@@ -50,11 +50,12 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.log = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.log = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +86,7 @@
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -95,7 +96,7 @@
             this.paymentToolStripMenuItem,
             this.chemicalAndEquipmentToolStripMenuItem});
             this.cashierToolStripMenuItem.Name = "cashierToolStripMenuItem";
-            this.cashierToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cashierToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.cashierToolStripMenuItem.Text = "Cashier";
             this.cashierToolStripMenuItem.Click += new System.EventHandler(this.cashierToolStripMenuItem_Click);
             // 
@@ -116,7 +117,7 @@
             // mLTToolStripMenuItem
             // 
             this.mLTToolStripMenuItem.Name = "mLTToolStripMenuItem";
-            this.mLTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mLTToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.mLTToolStripMenuItem.Text = "MLT";
             this.mLTToolStripMenuItem.Click += new System.EventHandler(this.mLTToolStripMenuItem_Click);
             // 
@@ -249,7 +250,8 @@
             this.toolStripButton6,
             this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.toolStripButton7});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(10);
@@ -257,26 +259,6 @@
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            // 
-            // log
-            // 
-            this.log.AutoSize = true;
-            this.log.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log.Location = new System.Drawing.Point(1206, 9);
-            this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(21, 19);
-            this.log.TabIndex = 8;
-            this.log.Text = "...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1115, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Loged in as";
             // 
             // toolStripLabel1
             // 
@@ -298,6 +280,36 @@
             this.toolStripButton5.Size = new System.Drawing.Size(29, 36);
             this.toolStripButton5.Text = "toolStripButton5";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // log
+            // 
+            this.log.AutoSize = true;
+            this.log.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.log.Location = new System.Drawing.Point(1206, 9);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(21, 19);
+            this.log.TabIndex = 8;
+            this.log.Text = "...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1115, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 19);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Loged in as";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(29, 36);
+            this.toolStripButton7.Text = "toolStripButton7";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // Front
             // 
@@ -351,5 +363,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
     }
 }
