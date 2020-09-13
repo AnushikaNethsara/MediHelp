@@ -42,81 +42,6 @@ namespace Medi_Help
         private void button1_Click(object sender, EventArgs e)
         {
 
-                try
-                {
-
-                    Formx1 f2 = new Formx1();
-                    lipidProfile ui = new lipidProfile();
-
-         
-
-                    TextObject text1 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text1"];
-                    text1.Text = v1.Text.ToString();
-
-                    TextObject text2 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text2"];
-                    text2.Text = v2.Text.ToString();
-
-                    TextObject text3 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text3"];
-                    text3.Text = v3.Text.ToString();
-
-                    TextObject text4 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text4"];
-                    text4.Text = v4.Text.ToString();
-
-                    TextObject text5 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text5"];
-                    text5.Text = v5.Text.ToString();
-
-                    TextObject text6 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss1"];
-                    text6.Text = s1.Text.ToString();
-
-                    TextObject text7 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss2"];
-                    text7.Text = s2.Text.ToString();
-
-                    TextObject text8 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss3"];
-                    text8.Text = s3.Text.ToString();
-
-                    TextObject text9 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss4"];
-                    text9.Text = s4.Text.ToString();
-
-                    TextObject text10 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss5"];
-                    text10.Text = s5.Text.ToString();
-
-                    TextObject text17 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["remark"];
-                    text17.Text = remark.Text.ToString();
-
-                //***Patient Details for crystal report***//
-
-
-                TextObject text11 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtDate"];
-                    text11.Text = DateTime.Today.ToString();
-
-                    TextObject text12 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtReport"];
-                    text12.Text = global.rReportname;
-
-                    TextObject text13 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtMlt"];
-                    text13.Text = global.UserID;
-
-                    TextObject text14 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtPatient"];
-                    text14.Text = global.rPatientName;
-
-                    TextObject text15 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtDob"];
-                    text15.Text = global.rDob;
-
-                    TextObject text16 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtGender"];
-                    text16.Text = global.rGender;
-
-
-                    //***end***//
-
-
-
-
-                f2.crystalReportViewer1.ReportSource = ui;
-                    f2.Show();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
 
         }
 
@@ -128,6 +53,86 @@ namespace Medi_Help
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                Formx1 f2 = new Formx1();
+                lipidProfile ui = new lipidProfile();
+
+
+
+                TextObject text1 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text1"];
+                text1.Text = v1.Text.ToString();
+
+                TextObject text2 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text2"];
+                text2.Text = v2.Text.ToString();
+
+                TextObject text3 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text3"];
+                text3.Text = v3.Text.ToString();
+
+                TextObject text4 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text4"];
+                text4.Text = v4.Text.ToString();
+
+                TextObject text5 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["Text5"];
+                text5.Text = v5.Text.ToString();
+
+                TextObject text6 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss1"];
+                text6.Text = s1.Text.ToString();
+
+                TextObject text7 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss2"];
+                text7.Text = s2.Text.ToString();
+
+                TextObject text8 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss3"];
+                text8.Text = s3.Text.ToString();
+
+                TextObject text9 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss4"];
+                text9.Text = s4.Text.ToString();
+
+                TextObject text10 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["ss5"];
+                text10.Text = s5.Text.ToString();
+
+                TextObject text17 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["remark"];
+                text17.Text = remark.Text.ToString();
+
+                //***Patient Details for crystal report***//
+
+
+                TextObject text11 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtDate"];
+                text11.Text = DateTime.Today.ToString();
+
+                TextObject text12 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtReport"];
+                text12.Text = global.rReportname;
+
+                TextObject text13 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtMlt"];
+                text13.Text = global.UserID;
+
+                TextObject text14 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtPatient"];
+                text14.Text = global.rPatientName;
+
+                TextObject text15 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtDob"];
+                text15.Text = global.rDob;
+
+                TextObject text16 = (TextObject)ui.ReportDefinition.Sections["Section3"].ReportObjects["txtGender"];
+                text16.Text = global.rGender;
+
+
+                //***end***//
+
+
+
+
+                f2.crystalReportViewer1.ReportSource = ui;
+                f2.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void v1_TextChanged(object sender, EventArgs e)

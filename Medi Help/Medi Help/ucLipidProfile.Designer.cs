@@ -59,9 +59,9 @@
             this.v1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.remark = new System.Windows.Forms.RichTextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -381,16 +381,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lipid Profiles";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(734, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 34);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Create Report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -409,14 +399,29 @@
             this.remark.TabIndex = 68;
             this.remark.Text = "";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(601, 411);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(156, 34);
+            this.guna2Button1.TabIndex = 83;
+            this.guna2Button1.Text = "Create Report";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // ucLipidProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ucLipidProfile";
-            this.Size = new System.Drawing.Size(900, 460);
+            this.Size = new System.Drawing.Size(778, 460);
             this.Load += new System.EventHandler(this.ucLipidProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -444,7 +449,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox textBox17;
         public System.Windows.Forms.TextBox s5;
         public System.Windows.Forms.TextBox textBox19;
@@ -459,5 +463,6 @@
         public System.Windows.Forms.TextBox s1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox remark;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

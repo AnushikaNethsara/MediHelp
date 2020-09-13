@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rDate = new System.Windows.Forms.DateTimePicker();
-            this.AddButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashier));
             this.allTests = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,11 +40,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.address = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dob = new System.Windows.Forms.DateTimePicker();
             this.female = new System.Windows.Forms.RadioButton();
             this.other = new System.Windows.Forms.RadioButton();
             this.male = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.contact = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,14 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.des = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
             this.txtBalance = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.paidAmount = new System.Windows.Forms.TextBox();
@@ -69,9 +63,17 @@
             this.total = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.search = new System.Windows.Forms.Button();
             this.nic = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.dateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dob = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.rDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.allTests)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,24 +82,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rDate
-            // 
-            this.rDate.Location = new System.Drawing.Point(174, 84);
-            this.rDate.Name = "rDate";
-            this.rDate.Size = new System.Drawing.Size(217, 22);
-            this.rDate.TabIndex = 41;
-            this.rDate.ValueChanged += new System.EventHandler(this.rDate_ValueChanged);
-            // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(174, 121);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 39;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // allTests
             // 
@@ -166,21 +150,21 @@
             // test
             // 
             this.test.FormattingEnabled = true;
-            this.test.Location = new System.Drawing.Point(174, 35);
+            this.test.Location = new System.Drawing.Point(149, 35);
             this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(217, 24);
+            this.test.Size = new System.Drawing.Size(252, 24);
             this.test.TabIndex = 26;
             this.test.SelectedIndexChanged += new System.EventHandler(this.test_SelectedIndexChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dob);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.address);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.dob);
             this.groupBox1.Controls.Add(this.female);
             this.groupBox1.Controls.Add(this.other);
             this.groupBox1.Controls.Add(this.male);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.contact);
             this.groupBox1.Controls.Add(this.label6);
@@ -188,7 +172,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.name);
-            this.groupBox1.Location = new System.Drawing.Point(12, 129);
+            this.groupBox1.Location = new System.Drawing.Point(12, 154);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(598, 253);
             this.groupBox1.TabIndex = 47;
@@ -211,19 +195,12 @@
             this.label15.TabIndex = 55;
             this.label15.Text = "Address";
             // 
-            // dob
-            // 
-            this.dob.Location = new System.Drawing.Point(125, 105);
-            this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(240, 22);
-            this.dob.TabIndex = 54;
-            // 
             // female
             // 
             this.female.AutoSize = true;
             this.female.Location = new System.Drawing.Point(209, 144);
             this.female.Name = "female";
-            this.female.Size = new System.Drawing.Size(75, 21);
+            this.female.Size = new System.Drawing.Size(72, 21);
             this.female.TabIndex = 53;
             this.female.TabStop = true;
             this.female.Text = "Female";
@@ -234,7 +211,7 @@
             this.other.AutoSize = true;
             this.other.Location = new System.Drawing.Point(291, 142);
             this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(65, 21);
+            this.other.Size = new System.Drawing.Size(62, 21);
             this.other.TabIndex = 52;
             this.other.TabStop = true;
             this.other.Text = "Other";
@@ -245,18 +222,11 @@
             this.male.AutoSize = true;
             this.male.Location = new System.Drawing.Point(125, 142);
             this.male.Name = "male";
-            this.male.Size = new System.Drawing.Size(59, 21);
+            this.male.Size = new System.Drawing.Size(56, 21);
             this.male.TabIndex = 51;
             this.male.TabStop = true;
             this.male.Text = "Male";
             this.male.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
-            this.dateTimePicker1.TabIndex = 50;
             // 
             // label7
             // 
@@ -321,34 +291,24 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.guna2Button3);
+            this.groupBox2.Controls.Add(this.guna2Button2);
             this.groupBox2.Controls.Add(this.rDate);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.AddButton);
             this.groupBox2.Controls.Add(this.test);
             this.groupBox2.Controls.Add(this.allTests);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 388);
+            this.groupBox2.Location = new System.Drawing.Point(12, 413);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(598, 343);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Report Details";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(281, 121);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGrid);
-            this.groupBox3.Location = new System.Drawing.Point(631, 23);
+            this.groupBox3.Location = new System.Drawing.Point(631, 48);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(779, 444);
             this.groupBox3.TabIndex = 49;
@@ -367,17 +327,17 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.guna2Button4);
+            this.groupBox4.Controls.Add(this.guna2Button5);
             this.groupBox4.Controls.Add(this.des);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.Add);
             this.groupBox4.Controls.Add(this.txtBalance);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.paidAmount);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.total);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(631, 489);
+            this.groupBox4.Location = new System.Drawing.Point(631, 514);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(779, 242);
             this.groupBox4.TabIndex = 50;
@@ -401,26 +361,6 @@
             this.label14.Size = new System.Drawing.Size(79, 17);
             this.label14.TabIndex = 52;
             this.label14.Text = "Description";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(569, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 33);
-            this.button4.TabIndex = 51;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(569, 153);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(96, 33);
-            this.Add.TabIndex = 50;
-            this.Add.Text = "Done";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtBalance
             // 
@@ -478,25 +418,15 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.search);
+            this.groupBox5.Controls.Add(this.guna2Button1);
             this.groupBox5.Controls.Add(this.nic);
             this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Location = new System.Drawing.Point(12, 23);
+            this.groupBox5.Location = new System.Drawing.Point(12, 48);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(592, 100);
             this.groupBox5.TabIndex = 51;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Search Patient";
-            // 
-            // search
-            // 
-            this.search.Location = new System.Drawing.Point(422, 44);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(75, 23);
-            this.search.TabIndex = 43;
-            this.search.Text = "Search";
-            this.search.UseVisualStyleBackColor = true;
-            this.search.Click += new System.EventHandler(this.button5_Click);
             // 
             // nic
             // 
@@ -514,16 +444,156 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "NIC";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(390, 37);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(156, 38);
+            this.guna2Button1.TabIndex = 85;
+            this.guna2Button1.Text = "Search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CheckedState.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePicker1.HoverState.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Location = new System.Drawing.Point(126, 26);
+            this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShadowDecoration.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Size = new System.Drawing.Size(252, 28);
+            this.dateTimePicker1.TabIndex = 57;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            // 
+            // dob
+            // 
+            this.dob.CheckedState.Parent = this.dob;
+            this.dob.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dob.HoverState.Parent = this.dob;
+            this.dob.Location = new System.Drawing.Point(128, 99);
+            this.dob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dob.Name = "dob";
+            this.dob.ShadowDecoration.Parent = this.dob;
+            this.dob.Size = new System.Drawing.Size(252, 28);
+            this.dob.TabIndex = 58;
+            this.dob.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(424, 35);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button2.TabIndex = 86;
+            this.guna2Button2.Text = "Add";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(424, 77);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button3.TabIndex = 87;
+            this.guna2Button3.Text = "Clear";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // rDate
+            // 
+            this.rDate.CheckedState.Parent = this.rDate;
+            this.rDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.rDate.HoverState.Parent = this.rDate;
+            this.rDate.Location = new System.Drawing.Point(149, 77);
+            this.rDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.rDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.rDate.Name = "rDate";
+            this.rDate.ShadowDecoration.Parent = this.rDate;
+            this.rDate.Size = new System.Drawing.Size(252, 28);
+            this.rDate.TabIndex = 58;
+            this.rDate.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(596, 91);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button4.TabIndex = 88;
+            this.guna2Button4.Text = "Done";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Location = new System.Drawing.Point(596, 52);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button5.TabIndex = 89;
+            this.guna2Button5.Text = "Clear";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.HoverState.Image")));
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(1374, 6);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(41, 39);
+            this.guna2ImageButton1.TabIndex = 86;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // Cashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1422, 743);
+            this.ClientSize = new System.Drawing.Size(1422, 772);
+            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Cashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -545,9 +615,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker rDate;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView allTests;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -564,31 +631,34 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox paidAmount;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox total;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton female;
         private System.Windows.Forms.RadioButton other;
         private System.Windows.Forms.RadioButton male;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DateTimePicker dob;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button search;
         private System.Windows.Forms.TextBox nic;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RichTextBox des;
         private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dob;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker rDate;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

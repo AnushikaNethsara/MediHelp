@@ -38,7 +38,19 @@ namespace Medi_Help
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool permission = false ;
+            
+            
+
+            
+        }
+        private void openFront(object obj)
+        {
+            Application.Run(new Front());
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            bool permission = false;
             if (uName.Text.Trim() != string.Empty && pWord.Text.Trim() != string.Empty)
             {
                 try
@@ -74,14 +86,16 @@ namespace Medi_Help
                 MessageBox.Show("Empty Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
-
-            
         }
-        private void openFront(object obj)
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Application.Run(new Front());
+            this.Dispose();
         }
 
+        private void uName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,9 +20,9 @@ namespace Medi_Help
         //public string conString = "Server=tcp:anushika.database.windows.net,1433;Initial Catalog=MediHelp;Persist Security Info=False;User ID=anushika;Password=im/2017/065;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         //public string conString = "Data Source=ANUSHH-IKKE;Initial Catalog=MediHelp;Integrated Security=True";
 
-        public string conString = "Server=tcp:mnksql.database.windows.net,1433;Initial Catalog=MediHelp;Persist Security Info=False;User ID=mnk;Password=MitMediHelp1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        //public string conString = "Server=tcp:mnksql.database.windows.net,1433;Initial Catalog=MediHelp;Persist Security Info=False;User ID=mnk;Password=MitMediHelp1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        //public string conString= @"Data Source=south.database.windows.net; Initial Catalog = MediHelp;User ID = mnk; Password =MitMediHelp123;";
+        public string conString= "Data Source=MNK-LAPTOP;Initial Catalog=master;Integrated Security=True";
 
         public SqlConnection getConnection()
         {

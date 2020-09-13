@@ -60,6 +60,11 @@ namespace Medi_Help
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             try
             {
 

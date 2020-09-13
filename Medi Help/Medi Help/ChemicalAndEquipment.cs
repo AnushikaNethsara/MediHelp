@@ -21,6 +21,18 @@ namespace Medi_Help
 
         private void ChemicalAndEquipment_Load(object sender, EventArgs e)
         {
+            dataGrid.BorderStyle = BorderStyle.None;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGrid.BackgroundColor = Color.White;
+
+            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             date.Value = DateTime.Today;
             availableEquipmentsAndChemicals();
          
@@ -44,83 +56,7 @@ namespace Medi_Help
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (core.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Empty Chemical or ID Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (name.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Empty Name Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (price.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Empty Price Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (quantity.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Empty Quantity Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                DialogResult answer;
-                answer = MessageBox.Show("Are you sure want to add Employee?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (answer == DialogResult.Yes)
-                {                   
-
-                    //******database connect ******
-                    try
-                    {
-                        string date1 = date.Value.ToString();
-                        if (core.Text.Equals("Chemical") || core.Text.Equals("Equipment"))
-                        {
-                            //float cPrice = float.Parse(price.Text);
-                            string cPrice = price.Text;
-                            string cQuantity = quantity.Text + cmbQuantity.Text;
-                            string cReference = reference.Text;
-                            string cName = name.Text;
-
-                            DBconnection dbconnection = new DBconnection();
-
-                            if (dbconnection.findChemicalEquipment(cName))
-                            {
-                                string currentQuantity = dbconnection.getCurrentQuantity(name.Text);
-                                int q = Convert.ToInt32(currentQuantity) + Convert.ToInt32(cQuantity);
-                                string newQuantity = q.ToString();
-                                dbconnection.updateChemicalAndEquipment(cName, newQuantity);
-                            }
-                            else
-                            {
-                                chemicalsAndEquipments chemicalsAndequipments = new chemicalsAndEquipments(date1, cName, cPrice, cQuantity, global.UserID, cReference);
-
-                                dbconnection.addChemicalsAndEquipments(chemicalsAndequipments);
-                            }
-                            availableEquipmentsAndChemicals();
-                            clearFileds();
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Enter valid Type(Chemical or Equipment)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-     
-                        
-
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show("Error:\n"+ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Console.WriteLine("Error: \n" + ex);
-                    }
-                    
-
-                }
-            }
+           
 
         }
         private void clearFileds()
@@ -136,7 +72,7 @@ namespace Medi_Help
 
         private void clear_Click(object sender, EventArgs e)
         {
-            clearFileds();
+            
 
 
         }
@@ -237,6 +173,97 @@ namespace Medi_Help
         }
 
         private void date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            clearFileds();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (core.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Empty Chemical or ID Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (name.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Empty Name Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (price.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Empty Price Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (quantity.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Empty Quantity Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                DialogResult answer;
+                answer = MessageBox.Show("Are you sure want to add Employee?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (answer == DialogResult.Yes)
+                {
+
+                    //******database connect ******
+                    try
+                    {
+                        string date1 = date.Value.ToString();
+                        if (core.Text.Equals("Chemical") || core.Text.Equals("Equipment"))
+                        {
+                            //float cPrice = float.Parse(price.Text);
+                            string cPrice = price.Text;
+                            string cQuantity = quantity.Text + cmbQuantity.Text;
+                            string cReference = reference.Text;
+                            string cName = name.Text;
+
+                            DBconnection dbconnection = new DBconnection();
+
+                            if (dbconnection.findChemicalEquipment(cName))
+                            {
+                                string currentQuantity = dbconnection.getCurrentQuantity(name.Text);
+                                int q = Convert.ToInt32(currentQuantity) + Convert.ToInt32(cQuantity);
+                                string newQuantity = q.ToString();
+                                dbconnection.updateChemicalAndEquipment(cName, newQuantity);
+                            }
+                            else
+                            {
+                                chemicalsAndEquipments chemicalsAndequipments = new chemicalsAndEquipments(date1, cName, cPrice, cQuantity, global.UserID, cReference);
+
+                                dbconnection.addChemicalsAndEquipments(chemicalsAndequipments);
+                            }
+                            availableEquipmentsAndChemicals();
+                            clearFileds();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Enter valid Type(Chemical or Equipment)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:\n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Console.WriteLine("Error: \n" + ex);
+                    }
+
+
+                }
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }

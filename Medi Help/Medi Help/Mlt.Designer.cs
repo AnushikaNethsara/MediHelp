@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mlt));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.test = new System.Windows.Forms.TextBox();
-            this.other = new System.Windows.Forms.RadioButton();
-            this.female = new System.Windows.Forms.RadioButton();
-            this.male = new System.Windows.Forms.RadioButton();
-            this.dob = new System.Windows.Forms.DateTimePicker();
             this.name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nic = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,8 +43,6 @@
             this.panelTest = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.type = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.chemicalUsed = new System.Windows.Forms.ComboBox();
             this.quantity = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,8 +51,16 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.male = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.female = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.other = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.dob = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,16 +72,16 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.test);
+            this.groupBox1.Controls.Add(this.dob);
             this.groupBox1.Controls.Add(this.other);
             this.groupBox1.Controls.Add(this.female);
             this.groupBox1.Controls.Add(this.male);
-            this.groupBox1.Controls.Add(this.dob);
+            this.groupBox1.Controls.Add(this.guna2Button1);
+            this.groupBox1.Controls.Add(this.test);
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nic);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
@@ -98,46 +100,6 @@
             this.test.Name = "test";
             this.test.Size = new System.Drawing.Size(287, 22);
             this.test.TabIndex = 56;
-            // 
-            // other
-            // 
-            this.other.AutoSize = true;
-            this.other.Location = new System.Drawing.Point(325, 136);
-            this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(65, 21);
-            this.other.TabIndex = 55;
-            this.other.TabStop = true;
-            this.other.Text = "Other";
-            this.other.UseVisualStyleBackColor = true;
-            // 
-            // female
-            // 
-            this.female.AutoSize = true;
-            this.female.Location = new System.Drawing.Point(225, 138);
-            this.female.Name = "female";
-            this.female.Size = new System.Drawing.Size(75, 21);
-            this.female.TabIndex = 54;
-            this.female.TabStop = true;
-            this.female.Text = "Female";
-            this.female.UseVisualStyleBackColor = true;
-            // 
-            // male
-            // 
-            this.male.AutoSize = true;
-            this.male.Location = new System.Drawing.Point(148, 138);
-            this.male.Name = "male";
-            this.male.Size = new System.Drawing.Size(59, 21);
-            this.male.TabIndex = 53;
-            this.male.TabStop = true;
-            this.male.Text = "Male";
-            this.male.UseVisualStyleBackColor = true;
-            // 
-            // dob
-            // 
-            this.dob.Location = new System.Drawing.Point(148, 98);
-            this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(287, 22);
-            this.dob.TabIndex = 52;
             // 
             // name
             // 
@@ -170,16 +132,6 @@
             this.nic.Name = "nic";
             this.nic.Size = new System.Drawing.Size(287, 22);
             this.nic.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(345, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 33);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -227,16 +179,16 @@
             // 
             // panelTest
             // 
-            this.panelTest.Location = new System.Drawing.Point(542, 20);
+            this.panelTest.Location = new System.Drawing.Point(542, 45);
             this.panelTest.Name = "panelTest";
-            this.panelTest.Size = new System.Drawing.Size(868, 657);
+            this.panelTest.Size = new System.Drawing.Size(868, 632);
             this.panelTest.TabIndex = 5;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.guna2Button3);
+            this.groupBox2.Controls.Add(this.guna2Button2);
             this.groupBox2.Controls.Add(this.type);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.chemicalUsed);
             this.groupBox2.Controls.Add(this.quantity);
             this.groupBox2.Controls.Add(this.label9);
@@ -264,26 +216,6 @@
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(41, 24);
             this.type.TabIndex = 59;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(419, 22);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 29);
-            this.button5.TabIndex = 58;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(419, 62);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 29);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "Submit";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // chemicalUsed
             // 
@@ -329,9 +261,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGrid);
-            this.groupBox3.Location = new System.Drawing.Point(3, 12);
+            this.groupBox3.Location = new System.Drawing.Point(3, 39);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(533, 450);
+            this.groupBox3.Size = new System.Drawing.Size(533, 423);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Available Tests";
@@ -349,8 +281,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.guna2Button5);
+            this.groupBox4.Controls.Add(this.guna2Button4);
             this.groupBox4.Location = new System.Drawing.Point(1069, 699);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(330, 92);
@@ -358,36 +290,180 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Submit";
             // 
-            // button2
+            // guna2ImageButton1
             // 
-            this.button2.Location = new System.Drawing.Point(196, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 31);
-            this.button2.TabIndex = 58;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.HoverState.Image")));
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(1368, 1);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(41, 39);
+            this.guna2ImageButton1.TabIndex = 14;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
-            // button6
+            // guna2Button1
             // 
-            this.button6.Location = new System.Drawing.Point(29, 37);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 33);
-            this.button6.TabIndex = 57;
-            this.button6.Text = "Submit Report";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(314, 265);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(122, 45);
+            this.guna2Button1.TabIndex = 57;
+            this.guna2Button1.Text = "Test";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(419, 21);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(75, 35);
+            this.guna2Button2.TabIndex = 60;
+            this.guna2Button2.Text = "Clear";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(419, 62);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(75, 32);
+            this.guna2Button3.TabIndex = 62;
+            this.guna2Button3.Text = "Submit";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(25, 35);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(120, 35);
+            this.guna2Button4.TabIndex = 63;
+            this.guna2Button4.Text = "Submit Report";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Location = new System.Drawing.Point(182, 35);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(121, 35);
+            this.guna2Button5.TabIndex = 64;
+            this.guna2Button5.Text = "Clear";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
+            // male
+            // 
+            this.male.AutoSize = true;
+            this.male.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.male.CheckedState.BorderThickness = 0;
+            this.male.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.male.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.male.CheckedState.InnerOffset = -4;
+            this.male.Location = new System.Drawing.Point(149, 136);
+            this.male.Name = "male";
+            this.male.Size = new System.Drawing.Size(56, 21);
+            this.male.TabIndex = 58;
+            this.male.Text = "Male";
+            this.male.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.male.UncheckedState.BorderThickness = 2;
+            this.male.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // female
+            // 
+            this.female.AutoSize = true;
+            this.female.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.female.CheckedState.BorderThickness = 0;
+            this.female.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.female.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.female.CheckedState.InnerOffset = -4;
+            this.female.Location = new System.Drawing.Point(249, 136);
+            this.female.Name = "female";
+            this.female.Size = new System.Drawing.Size(72, 21);
+            this.female.TabIndex = 59;
+            this.female.Text = "Female";
+            this.female.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.female.UncheckedState.BorderThickness = 2;
+            this.female.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.female.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // other
+            // 
+            this.other.AutoSize = true;
+            this.other.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.other.CheckedState.BorderThickness = 0;
+            this.other.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.other.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.other.CheckedState.InnerOffset = -4;
+            this.other.Location = new System.Drawing.Point(364, 136);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(62, 21);
+            this.other.TabIndex = 60;
+            this.other.Text = "Other";
+            this.other.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.other.UncheckedState.BorderThickness = 2;
+            this.other.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.other.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // dob
+            // 
+            this.dob.CheckedState.Parent = this.dob;
+            this.dob.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dob.HoverState.Parent = this.dob;
+            this.dob.Location = new System.Drawing.Point(149, 101);
+            this.dob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dob.Name = "dob";
+            this.dob.ShadowDecoration.Parent = this.dob;
+            this.dob.Size = new System.Drawing.Size(287, 24);
+            this.dob.TabIndex = 61;
+            this.dob.Value = new System.DateTime(2020, 9, 14, 0, 24, 51, 991);
             // 
             // Mlt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1411, 803);
+            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelTest);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Mlt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -410,7 +486,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nic;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
@@ -419,13 +494,7 @@
         private System.Windows.Forms.Panel panelTest;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton other;
-        private System.Windows.Forms.RadioButton female;
-        private System.Windows.Forms.RadioButton male;
-        private System.Windows.Forms.DateTimePicker dob;
         private System.Windows.Forms.ComboBox type;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox chemicalUsed;
         private System.Windows.Forms.TextBox quantity;
         private System.Windows.Forms.Label label9;
@@ -435,7 +504,15 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2RadioButton male;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dob;
+        private Guna.UI2.WinForms.Guna2RadioButton other;
+        private Guna.UI2.WinForms.Guna2RadioButton female;
     }
 }

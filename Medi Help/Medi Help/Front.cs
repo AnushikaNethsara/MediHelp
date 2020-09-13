@@ -97,8 +97,7 @@ namespace Medi_Help
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Admin ob = new Admin();
-            ob.ShowDialog();
+            
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -108,26 +107,22 @@ namespace Medi_Help
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Cashier ob = new Cashier();
-            ob.ShowDialog();
+            
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            ChemicalAndEquipment ob = new ChemicalAndEquipment();
-            ob.ShowDialog();
+            
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Mlt ob = new Mlt();
-            ob.ShowDialog();
+            
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            Notification ob = new Notification();
-            ob.ShowDialog();
+           
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -137,13 +132,12 @@ namespace Medi_Help
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            DBconnection ui = new DBconnection();
-            ui.showNotificationTimeToTime();
+            
         }
 
         public void enableButton()
         {
-            toolStripButton5.Enabled = true;
+            
         }
 
 
@@ -158,6 +152,77 @@ namespace Medi_Help
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Nipuna");
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            Admin ob = new Admin();
+            ob.ShowDialog();
+        }
+
+        private void guna2ImageButton4_Click(object sender, EventArgs e)
+        {
+            Mlt ob = new Mlt();
+            ob.ShowDialog();
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+            Cashier ob = new Cashier();
+            ob.ShowDialog();
+        }
+
+        private void guna2ImageButton5_Click(object sender, EventArgs e)
+        {
+            ChemicalAndEquipment ob = new ChemicalAndEquipment();
+            ob.ShowDialog();
+        }
+
+        private void guna2ImageButton7_Click(object sender, EventArgs e)
+        {
+            Notification ob = new Notification();
+            ob.ShowDialog();
+        }
+
+        private void guna2ImageButton6_Click(object sender, EventArgs e)
+        {
+            DBconnection ui = new DBconnection();
+            ui.showNotificationTimeToTime();
         }
     }
 }

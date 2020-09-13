@@ -43,5 +43,10 @@ namespace Medi_Help
             dataGrid.DataSource = dt;
             connection5.getConnection().Close();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

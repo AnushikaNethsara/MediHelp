@@ -297,11 +297,6 @@ E:\2nd Year\Tech Dots\Project\Git2\Medi Help\Medi Help\obj\Debug\Medi_Help.ucSal
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\Medi Help.exe.config
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\Medi Help.exe
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\Medi Help.pdb
-G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\AxShockwaveFlashObjects.dll
-G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.ReportSource.dll
-G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.Shared.dll
-G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.Windows.Forms.dll
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\ShockwaveFlashObjects.dll
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -344,3 +339,4 @@ G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\obj\Debug\Medi Help.csp
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\obj\Debug\Medi Help.csproj.CopyComplete
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\obj\Debug\Medi Help.exe
 G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\obj\Debug\Medi Help.pdb
+G:\Academic\Level 2\Project\MediHelp\Medi Help\Medi Help\bin\Debug\Guna.UI2.dll

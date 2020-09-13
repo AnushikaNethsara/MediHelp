@@ -29,6 +29,37 @@ namespace Medi_Help
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             if (!panelAdmin.Controls.Contains(ucDailyCahReports.Instance))
             {
                 panelAdmin.Controls.Add(ucDailyCahReports.Instance);
@@ -41,7 +72,12 @@ namespace Medi_Help
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
         {
             if (!panelAdmin.Controls.Contains(ucUser.Instance))
             {
@@ -55,7 +91,21 @@ namespace Medi_Help
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (!panelAdmin.Controls.Contains(ucViewEmployeeDetails.Instance))
+            {
+                panelAdmin.Controls.Add(ucViewEmployeeDetails.Instance);
+                ucViewEmployeeDetails.Instance.Dock = DockStyle.Fill;
+                ucViewEmployeeDetails.Instance.BringToFront();
+            }
+            else
+            {
+                ucViewEmployeeDetails.Instance.BringToFront();
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
             if (!panelAdmin.Controls.Contains(ucSalesReports.Instance))
             {
@@ -69,7 +119,7 @@ namespace Medi_Help
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void guna2Button4_Click(object sender, EventArgs e)
         {
             if (!panelAdmin.Controls.Contains(ucPatientsReports.Instance))
             {
@@ -81,10 +131,9 @@ namespace Medi_Help
             {
                 ucPatientsReports.Instance.BringToFront();
             }
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void guna2Button6_Click(object sender, EventArgs e)
         {
             if (!panelAdmin.Controls.Contains(ucUpdatePriceList.Instance))
             {
@@ -95,20 +144,6 @@ namespace Medi_Help
             else
             {
                 ucUpdatePriceList.Instance.BringToFront();
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (!panelAdmin.Controls.Contains(ucViewEmployeeDetails.Instance))
-            {
-                panelAdmin.Controls.Add(ucViewEmployeeDetails.Instance);
-                ucViewEmployeeDetails.Instance.Dock = DockStyle.Fill;
-                ucViewEmployeeDetails.Instance.BringToFront();
-            }
-            else
-            {
-                ucViewEmployeeDetails.Instance.BringToFront();
             }
         }
     }

@@ -27,97 +27,23 @@ namespace Medi_Help
         
         private void button1_Click(object sender, EventArgs e)
         {
-            global.rPatientName = name.Text;
-            global.rReportname = test.Text;
-            global.rDob = dob.Value.ToString();
-
-
-            if (test.Text.Equals("Lipid Profile"))
-            {
-                if (!panelTest.Controls.Contains(ucLipidProfile.Instance))
-                {
-                    panelTest.Controls.Add(ucLipidProfile.Instance);
-                    ucLipidProfile.Instance.Dock = DockStyle.Fill;
-                    ucLipidProfile.Instance.BringToFront();
-                }
-                else
-                {
-                    ucLipidProfile.Instance.BringToFront();
-                }
-            }
-            else if (test.Text.Equals("Urine protein ratio"))
-            {
-                if (!panelTest.Controls.Contains(ucUrineRatio.Instance))
-                {
-                    panelTest.Controls.Add(ucUrineRatio.Instance);
-                    ucUrineRatio.Instance.Dock = DockStyle.Fill;
-                    ucUrineRatio.Instance.BringToFront();
-                }
-                else
-                {
-                    ucUrineRatio.Instance.BringToFront();
-                }
-            }
-            else if (test.Text.Equals("Vitamine B12-Serum"))
-            {
-                if (!panelTest.Controls.Contains(ucVitamineB12Serum.Instance))
-                {
-                    panelTest.Controls.Add(ucVitamineB12Serum.Instance);
-                    ucVitamineB12Serum.Instance.Dock = DockStyle.Fill;
-                    ucVitamineB12Serum.Instance.BringToFront();
-                }
-                else
-                {
-                    ucVitamineB12Serum.Instance.BringToFront();
-                }
-            }
-            else if (test.Text.Equals("Ionized Calcium"))
-            {
-                if (!panelTest.Controls.Contains(ucIonizedCalcium.Instance))
-                {
-                    panelTest.Controls.Add(ucIonizedCalcium.Instance);
-                    ucIonizedCalcium.Instance.Dock = DockStyle.Fill;
-                    ucIonizedCalcium.Instance.BringToFront();
-                }
-                else
-                {
-                    ucIonizedCalcium.Instance.BringToFront(); 
-                }
-            }
-            else if (test.Text.Equals("Thyroid Profile"))
-            {
-                if (!panelTest.Controls.Contains(ucThyroidProfile.Instance))
-                {
-                    panelTest.Controls.Add(ucThyroidProfile.Instance);
-                    ucThyroidProfile.Instance.Dock = DockStyle.Fill;
-                    ucThyroidProfile.Instance.BringToFront();
-                }
-                else
-                {
-                    ucThyroidProfile.Instance.BringToFront();
-                }
-            }
-            else if (test.Text.Equals("Serum Ferritin"))
-            {
-                if (!panelTest.Controls.Contains(ucSerumFerritin.Instance))
-                {
-                    panelTest.Controls.Add(ucSerumFerritin.Instance);
-                    ucSerumFerritin.Instance.Dock = DockStyle.Fill;
-                    ucSerumFerritin.Instance.BringToFront();
-                }
-                else
-                {
-                    ucSerumFerritin.Instance.BringToFront();
-                }
-            }
-            else
-            {
-
-            }
+           
         }
 
         private void Mlt_Load(object sender, EventArgs e)
         {
+            dataGrid.BorderStyle = BorderStyle.None;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGrid.BackgroundColor = Color.White;
+
+            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             displayAvailableReports();
             string[] chemicalList = global.chemicaltList;
             
@@ -148,9 +74,7 @@ namespace Medi_Help
 
         private void button5_Click(object sender, EventArgs e)
         {
-            chemicalUsed.Text = "";
-            quantity.Text = "";
-            type.Text = "";
+           
 
         }
 
@@ -214,35 +138,7 @@ namespace Medi_Help
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DBconnection con1 = new DBconnection();
-            if (chemicalUsed.Text.Trim() != string.Empty && quantity.Text.Trim() != string.Empty)
-            {
-                if (con1.findChemicalEquipment(chemicalUsed.Text))
-                {
-                    double quantityInTheStock = Convert.ToDouble(con1.getCurrentQuantity(chemicalUsed.Text));
-                    double quantityEntered = Convert.ToDouble(quantity.Text);
-
-                    if (quantityEntered > quantityInTheStock)
-                    {
-                        MessageBox.Show("Not Enough chemical in store!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        double newQuantity = quantityInTheStock - quantityEntered;
-                        con1.updateChemicalAndEquipment(chemicalUsed.Text, newQuantity.ToString());
-                        chemicalUsed.Text = "";
-                        quantity.Text = "";
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Chemical not added to the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Empty Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
             
         }
 
@@ -300,15 +196,154 @@ namespace Medi_Help
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            displayAvailableReports();
-            clear();
-
+           
 
         }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            global.rPatientName = name.Text;
+            global.rReportname = test.Text;
+            global.rDob = dob.Value.ToString();
+
+
+            if (test.Text.Equals("Lipid Profile"))
+            {
+                if (!panelTest.Controls.Contains(ucLipidProfile.Instance))
+                {
+                    panelTest.Controls.Add(ucLipidProfile.Instance);
+                    ucLipidProfile.Instance.Dock = DockStyle.Fill;
+                    ucLipidProfile.Instance.BringToFront();
+                }
+                else
+                {
+                    ucLipidProfile.Instance.BringToFront();
+                }
+            }
+            else if (test.Text.Equals("Urine protein ratio"))
+            {
+                if (!panelTest.Controls.Contains(ucUrineRatio.Instance))
+                {
+                    panelTest.Controls.Add(ucUrineRatio.Instance);
+                    ucUrineRatio.Instance.Dock = DockStyle.Fill;
+                    ucUrineRatio.Instance.BringToFront();
+                }
+                else
+                {
+                    ucUrineRatio.Instance.BringToFront();
+                }
+            }
+            else if (test.Text.Equals("Vitamine B12-Serum"))
+            {
+                if (!panelTest.Controls.Contains(ucVitamineB12Serum.Instance))
+                {
+                    panelTest.Controls.Add(ucVitamineB12Serum.Instance);
+                    ucVitamineB12Serum.Instance.Dock = DockStyle.Fill;
+                    ucVitamineB12Serum.Instance.BringToFront();
+                }
+                else
+                {
+                    ucVitamineB12Serum.Instance.BringToFront();
+                }
+            }
+            else if (test.Text.Equals("Ionized Calcium"))
+            {
+                if (!panelTest.Controls.Contains(ucIonizedCalcium.Instance))
+                {
+                    panelTest.Controls.Add(ucIonizedCalcium.Instance);
+                    ucIonizedCalcium.Instance.Dock = DockStyle.Fill;
+                    ucIonizedCalcium.Instance.BringToFront();
+                }
+                else
+                {
+                    ucIonizedCalcium.Instance.BringToFront();
+                }
+            }
+            else if (test.Text.Equals("Thyroid Profile"))
+            {
+                if (!panelTest.Controls.Contains(ucThyroidProfile.Instance))
+                {
+                    panelTest.Controls.Add(ucThyroidProfile.Instance);
+                    ucThyroidProfile.Instance.Dock = DockStyle.Fill;
+                    ucThyroidProfile.Instance.BringToFront();
+                }
+                else
+                {
+                    ucThyroidProfile.Instance.BringToFront();
+                }
+            }
+            else if (test.Text.Equals("Serum Ferritin"))
+            {
+                if (!panelTest.Controls.Contains(ucSerumFerritin.Instance))
+                {
+                    panelTest.Controls.Add(ucSerumFerritin.Instance);
+                    ucSerumFerritin.Instance.Dock = DockStyle.Fill;
+                    ucSerumFerritin.Instance.BringToFront();
+                }
+                else
+                {
+                    ucSerumFerritin.Instance.BringToFront();
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            chemicalUsed.Text = "";
+            quantity.Text = "";
+            type.Text = "";
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            DBconnection con1 = new DBconnection();
+            if (chemicalUsed.Text.Trim() != string.Empty && quantity.Text.Trim() != string.Empty)
+            {
+                if (con1.findChemicalEquipment(chemicalUsed.Text))
+                {
+                    double quantityInTheStock = Convert.ToDouble(con1.getCurrentQuantity(chemicalUsed.Text));
+                    double quantityEntered = Convert.ToDouble(quantity.Text);
+
+                    if (quantityEntered > quantityInTheStock)
+                    {
+                        MessageBox.Show("Not Enough chemical in store!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        double newQuantity = quantityInTheStock - quantityEntered;
+                        con1.updateChemicalAndEquipment(chemicalUsed.Text, newQuantity.ToString());
+                        chemicalUsed.Text = "";
+                        quantity.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chemical not added to the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Empty Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
             try
             {
                 if (nic.Text.Trim() != string.Empty && test.Text.Trim() != string.Empty)
@@ -333,7 +368,7 @@ namespace Medi_Help
                 {
                     MessageBox.Show("Empty Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -341,6 +376,13 @@ namespace Medi_Help
                 Console.WriteLine("upload: \n" + ex);
             }
             displayAvailableReports();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            displayAvailableReports();
+            clear();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
