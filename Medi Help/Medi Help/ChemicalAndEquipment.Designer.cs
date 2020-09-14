@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChemicalAndEquipment));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.date = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.name = new System.Windows.Forms.ComboBox();
             this.core = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,6 +76,51 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chemical And Equipment Details";
+            // 
+            // date
+            // 
+            this.date.CheckedState.Parent = this.date;
+            this.date.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date.HoverState.Parent = this.date;
+            this.date.Location = new System.Drawing.Point(267, 23);
+            this.date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.date.Name = "date";
+            this.date.ShadowDecoration.Parent = this.date;
+            this.date.Size = new System.Drawing.Size(285, 36);
+            this.date.TabIndex = 63;
+            this.date.Value = new System.DateTime(2020, 9, 14, 2, 3, 40, 37);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(426, 609);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(126, 35);
+            this.guna2Button1.TabIndex = 62;
+            this.guna2Button1.Text = "Add";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(267, 609);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(126, 35);
+            this.guna2Button2.TabIndex = 61;
+            this.guna2Button2.Text = "Clear";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // name
             // 
@@ -233,51 +278,6 @@
             this.dataGrid.Size = new System.Drawing.Size(744, 626);
             this.dataGrid.TabIndex = 2;
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(267, 609);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(126, 35);
-            this.guna2Button2.TabIndex = 61;
-            this.guna2Button2.Text = "Clear";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(426, 609);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(126, 35);
-            this.guna2Button1.TabIndex = 62;
-            this.guna2Button1.Text = "Add";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // date
-            // 
-            this.date.CheckedState.Parent = this.date;
-            this.date.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.date.HoverState.Parent = this.date;
-            this.date.Location = new System.Drawing.Point(267, 23);
-            this.date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.date.Name = "date";
-            this.date.ShadowDecoration.Parent = this.date;
-            this.date.Size = new System.Drawing.Size(285, 36);
-            this.date.TabIndex = 63;
-            this.date.Value = new System.DateTime(2020, 9, 14, 2, 3, 40, 37);
-            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -294,6 +294,7 @@
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(41, 39);
             this.guna2ImageButton1.TabIndex = 87;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // ChemicalAndEquipment
             // 

@@ -31,6 +31,18 @@ namespace Medi_Help
 
         private void ucPatientsReports_Load(object sender, EventArgs e)
         {
+            dataGrid.BorderStyle = BorderStyle.None;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGrid.BackgroundColor = Color.White;
+
+            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             PatientReports();
         }
         public void PatientReports()

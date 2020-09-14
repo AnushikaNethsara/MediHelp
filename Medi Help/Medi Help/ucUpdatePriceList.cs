@@ -30,6 +30,18 @@ namespace Medi_Help
 
         private void ucEmployees_Load(object sender, EventArgs e)
         {
+            dataGrid.BorderStyle = BorderStyle.None;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGrid.BackgroundColor = Color.White;
+
+            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             displayPriceList();
             txtName.ReadOnly = true;
         }
@@ -58,21 +70,7 @@ namespace Medi_Help
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                String name = txtName.Text;
-                double price = Convert.ToDouble(txtPrice.Text);
-
-                DBconnection ob = new DBconnection();
-                ob.updatePriceList(name,price);
-                clear();
-                displayPriceList();
-            }
-
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error Update! \n"+ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+          
         }
 
         private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,6 +84,25 @@ namespace Medi_Help
                 txtPrice.Text = row.Cells["Price"].Value.ToString();
 
 
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String name = txtName.Text;
+                double price = Convert.ToDouble(txtPrice.Text);
+
+                DBconnection ob = new DBconnection();
+                ob.updatePriceList(name, price);
+                clear();
+                displayPriceList();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Update! \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

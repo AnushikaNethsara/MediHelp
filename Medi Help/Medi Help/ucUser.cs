@@ -141,10 +141,96 @@ namespace Medi_Help
 
         private void register_Click(object sender, EventArgs e)
         {
+            
+
+        }
+        private void clearFileds()
+        {
+            name.Text = "";
+            nic.Text = "";
+            email.Text = "";
+            dob.Value = DateTime.Today;
+            phone.Text = "";
+            empType.Text = "";
+            other.Text = "";
+            pictureBox1.Image = null;
+            if (user.Checked)
+            {
+                userName.Text = "";
+                password.Text = "";
+                cPassword.Text = "";
+                user.Checked = false;
+                empType.SelectedIndex = -1;
+            }
+        }
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void phone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            clearFileds();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
             DBconnection ui = new DBconnection();
             string type = empType.Text;
 
-            
+
 
             if (name.Text.Trim() == string.Empty)
             {
@@ -176,24 +262,24 @@ namespace Medi_Help
             {
                 if (type.Equals("MLT"))
                 {
-                    
+
                 }
                 else if (type.Equals("Casheir"))
                 {
-                   
+
                 }
                 else if (type.Equals("Admin"))
                 {
-                   
+
                 }
-                else if (type.Equals("Other") )
+                else if (type.Equals("Other"))
                 {
-                    if(other.Text.Trim() == string.Empty)
+                    if (other.Text.Trim() == string.Empty)
                     {
                         MessageBox.Show("Empty Other Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    
+
                 }
                 else
                 {
@@ -201,14 +287,14 @@ namespace Medi_Help
                     return;
                 }
 
-                
+
             }
             else if (phone.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Empty Phone Number Field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             else
             {
                 return;
@@ -251,7 +337,7 @@ namespace Medi_Help
             //*************database**********************
             if (answer == DialogResult.Yes || answer == DialogResult.OK)
             {
-                 
+
                 try
                 {
                     MemoryStream ms = new MemoryStream();
@@ -262,10 +348,10 @@ namespace Medi_Help
                         return;
                     }
                     else
-                    {                       
-                        pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);                        
+                    {
+                        pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
                     }
-                    
+
 
                     string Enic = "E" + nic.Text;
                     string Ename = name.Text;
@@ -276,91 +362,20 @@ namespace Medi_Help
                     string Eusername = userName.Text;
                     string Epassword = password.Text;
                     byte[] Photo = img;
-                    employee ox = new employee(Enic,Ename,date,Eemail,Ephone,eType,Eusername,Epassword,Photo);
-                    
+                    employee ox = new employee(Enic, Ename, date, Eemail, Ephone, eType, Eusername, Epassword, Photo);
+
                     ui.addEmployees(ox);
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("erro: \n" + ex);
-                    Console.WriteLine("erro: \n"+ex);
+                    Console.WriteLine("erro: \n" + ex);
                 }
 
 
                 clearFileds();
             }
-
-        }
-        private void clearFileds()
-        {
-            name.Text = "";
-            nic.Text = "";
-            email.Text = "";
-            dob.Value = DateTime.Today;
-            phone.Text = "";
-            empType.Text = "";
-            other.Text = "";
-            pictureBox1.Image = null;
-            if (user.Checked)
-            {
-                userName.Text = "";
-                password.Text = "";
-                cPassword.Text = "";
-                user.Checked = false;
-                empType.SelectedIndex = -1;
-            }
-        }
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            clearFileds();
-        }
-
-        private void phone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-            (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void phone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
-            if (opf.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(opf.FileName);
-            }
-        }
-
-        
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
     }
 }

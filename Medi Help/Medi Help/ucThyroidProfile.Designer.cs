@@ -53,7 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -290,21 +290,26 @@
             this.label4.TabIndex = 66;
             this.label4.Text = "UOM";
             // 
-            // button1
+            // guna2Button1
             // 
-            this.button1.Location = new System.Drawing.Point(730, 406);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 34);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Create Report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(701, 406);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(156, 34);
+            this.guna2Button1.TabIndex = 85;
+            this.guna2Button1.Text = "Create Report";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ucThyroidProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ucThyroidProfile";
             this.Size = new System.Drawing.Size(900, 460);
@@ -320,7 +325,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox v1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -343,5 +347,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox remark;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

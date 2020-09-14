@@ -51,6 +51,16 @@ namespace Medi_Help
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void unit3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             try
             {
 
@@ -115,11 +125,6 @@ namespace Medi_Help
                 MessageBox.Show(ex.ToString());
                 Console.WriteLine("Error: " + ex);
             }
-        }
-
-        private void unit3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

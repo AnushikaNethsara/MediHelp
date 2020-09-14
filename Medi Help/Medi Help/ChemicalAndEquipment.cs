@@ -267,5 +267,10 @@ namespace Medi_Help
         {
 
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
