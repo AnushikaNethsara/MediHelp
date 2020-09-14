@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashier));
             this.allTests = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +39,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.test = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dob = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.address = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.female = new System.Windows.Forms.RadioButton();
@@ -51,9 +54,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.rDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.des = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtBalance = new System.Windows.Forms.TextBox();
@@ -63,17 +71,11 @@
             this.total = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.nic = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.dateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dob = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.rDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.allTests)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -178,6 +180,36 @@
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Details";
+            // 
+            // dob
+            // 
+            this.dob.CheckedState.Parent = this.dob;
+            this.dob.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dob.HoverState.Parent = this.dob;
+            this.dob.Location = new System.Drawing.Point(128, 99);
+            this.dob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dob.Name = "dob";
+            this.dob.ShadowDecoration.Parent = this.dob;
+            this.dob.Size = new System.Drawing.Size(252, 28);
+            this.dob.TabIndex = 58;
+            this.dob.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CheckedState.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePicker1.HoverState.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Location = new System.Drawing.Point(126, 26);
+            this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShadowDecoration.Parent = this.dateTimePicker1;
+            this.dateTimePicker1.Size = new System.Drawing.Size(252, 28);
+            this.dateTimePicker1.TabIndex = 57;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
             // 
             // address
             // 
@@ -305,6 +337,51 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Report Details";
             // 
+            // guna2Button3
+            // 
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(424, 77);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button3.TabIndex = 87;
+            this.guna2Button3.Text = "Clear";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(424, 35);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button2.TabIndex = 86;
+            this.guna2Button2.Text = "Add";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // rDate
+            // 
+            this.rDate.CheckedState.Parent = this.rDate;
+            this.rDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.rDate.HoverState.Parent = this.rDate;
+            this.rDate.Location = new System.Drawing.Point(149, 77);
+            this.rDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.rDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.rDate.Name = "rDate";
+            this.rDate.ShadowDecoration.Parent = this.rDate;
+            this.rDate.Size = new System.Drawing.Size(252, 28);
+            this.rDate.TabIndex = 58;
+            this.rDate.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGrid);
@@ -344,6 +421,36 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Payment Details";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(596, 91);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button4.TabIndex = 88;
+            this.guna2Button4.Text = "Done";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Location = new System.Drawing.Point(596, 52);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(156, 33);
+            this.guna2Button5.TabIndex = 89;
+            this.guna2Button5.Text = "Clear";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // des
             // 
@@ -428,22 +535,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Search Patient";
             // 
-            // nic
-            // 
-            this.nic.Location = new System.Drawing.Point(126, 46);
-            this.nic.Name = "nic";
-            this.nic.Size = new System.Drawing.Size(241, 22);
-            this.nic.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 17);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "NIC";
-            // 
             // guna2Button1
             // 
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
@@ -459,110 +550,21 @@
             this.guna2Button1.Text = "Search";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // dateTimePicker1
+            // nic
             // 
-            this.dateTimePicker1.CheckedState.Parent = this.dateTimePicker1;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePicker1.HoverState.Parent = this.dateTimePicker1;
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 26);
-            this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShadowDecoration.Parent = this.dateTimePicker1;
-            this.dateTimePicker1.Size = new System.Drawing.Size(252, 28);
-            this.dateTimePicker1.TabIndex = 57;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
+            this.nic.Location = new System.Drawing.Point(126, 46);
+            this.nic.Name = "nic";
+            this.nic.Size = new System.Drawing.Size(241, 22);
+            this.nic.TabIndex = 42;
             // 
-            // dob
+            // label2
             // 
-            this.dob.CheckedState.Parent = this.dob;
-            this.dob.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dob.HoverState.Parent = this.dob;
-            this.dob.Location = new System.Drawing.Point(128, 99);
-            this.dob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dob.Name = "dob";
-            this.dob.ShadowDecoration.Parent = this.dob;
-            this.dob.Size = new System.Drawing.Size(252, 28);
-            this.dob.TabIndex = 58;
-            this.dob.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(424, 35);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(156, 33);
-            this.guna2Button2.TabIndex = 86;
-            this.guna2Button2.Text = "Add";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(424, 77);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(156, 33);
-            this.guna2Button3.TabIndex = 87;
-            this.guna2Button3.Text = "Clear";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // rDate
-            // 
-            this.rDate.CheckedState.Parent = this.rDate;
-            this.rDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.rDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.rDate.HoverState.Parent = this.rDate;
-            this.rDate.Location = new System.Drawing.Point(149, 77);
-            this.rDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.rDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.rDate.Name = "rDate";
-            this.rDate.ShadowDecoration.Parent = this.rDate;
-            this.rDate.Size = new System.Drawing.Size(252, 28);
-            this.rDate.TabIndex = 58;
-            this.rDate.Value = new System.DateTime(2020, 9, 14, 1, 46, 52, 417);
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(596, 91);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(156, 33);
-            this.guna2Button4.TabIndex = 88;
-            this.guna2Button4.Text = "Done";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
-            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Location = new System.Drawing.Point(596, 52);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(156, 33);
-            this.guna2Button5.TabIndex = 89;
-            this.guna2Button5.Text = "Clear";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 17);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "NIC";
             // 
             // guna2ImageButton1
             // 
@@ -581,6 +583,11 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(41, 39);
             this.guna2ImageButton1.TabIndex = 86;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // Cashier
             // 
@@ -660,5 +667,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
